@@ -1,0 +1,3 @@
+# Git Ignore File
+.idea
+*/__pycache__
