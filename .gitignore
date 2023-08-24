@@ -1,0 +1,4 @@
+# Git Ingnore File
+*.mcdr
+MCDR_Plg-Source-Code/MCDR/
+*pack.cmd
