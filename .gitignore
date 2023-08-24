@@ -1,0 +1,5 @@
+# Git ignore File
+MC-Server-Startup/2.1.0/config.bat
+*/config.bat
+*.jar
+MC-Server-Startup/2.1.0/
