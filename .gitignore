@@ -1,0 +1,54 @@
+# IDE
+.idea/
+.vscode/
+
+# python things
+__pycache__
+*.pyc
+/venv/
+.pytest_cache
+.mypy_cache
+
+# pypi
+/build/
+/dist/
+*.egg-info/
+
+# file structure
+/log/
+/logs/
+/config/
+/server/*
+/release/
+/plugins/*
+
+# plugin things
+*.mcdr
+/qb_multi/
+/perma_backup/
+/PCRC_recordings/
+/PCRC_recording_temp/
+/mc_task.json
+/seen.json
+/PCRC.log
+/MCDR_update/
+/back-up/
+
+# random files
+/test.py
+/custom_handler/
+/plugins_test/*
+/plugins0.x/*
+/plugins_dev/*
+
+# user config files
+# these will be automatically generated at the first run
+/config.yml
+/permission.yml
+
+# sphinx documentation
+/docs/build/
+/docs/source/_locale/_static/
+**/.doctrees/
+**/*.mo
+**/*.pot

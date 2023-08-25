@@ -1,0 +1,12 @@
+name: CI for MCDR Pull Requests
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  assemble:
+    needs: test
+    uses: ./.github/workflows/assemble.yml

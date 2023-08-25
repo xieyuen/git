@@ -1,0 +1,257 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version:  mcdreforged\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-14 20:55+0800\n"
+"PO-Revision-Date: 2021-01-22 14:26+0000\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"Language-Team: Chinese Simplified\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../plugin_dev/dev_tips.rst:3
+msgid "Some tips to plugin development"
+msgstr "插件开发的一些提示"
+
+#: ../plugin_dev/dev_tips.rst:5
+msgid "The following tips are useful to"
+msgstr "下面的提示对我们很有帮助"
+
+#: ../plugin_dev/dev_tips.rst:8
+msgid "Help message"
+msgstr "帮助消息"
+
+#: ../plugin_dev/dev_tips.rst:10
+msgid ""
+"Use "
+":meth:`~mcdreforged.plugin.server_interface.PluginServerInterface.register_help_message`"
+" to add some necessary tips for your plugin, so the player can use "
+"``!!help`` command to know about your plugin"
+msgstr ""
+"使用 "
+":meth:`~mcdreforged.plugin.server_interface.PluginServerInterface.register_help_message`"
+" 来为你的插件添加一些必要的提示，这样玩家就可以使用 ``!!help`` 命令来了解如何使用你的插件"
+
+#: ../plugin_dev/dev_tips.rst:13
+msgid ""
+"Of course if your plugin is supposed to only be used by player with "
+"enough permission level, specify the *permission* argument when "
+"registering"
+msgstr "当然，如果你的插件只能被有足够权限的玩家使用，请在注册时指定 *permission* 参数"
+
+#: ../plugin_dev/dev_tips.rst:16
+msgid "Translation"
+msgstr "翻译"
+
+#: ../plugin_dev/dev_tips.rst:18
+msgid ""
+"For :ref:`plugin_dev/plugin_format:Multi file Plugin`, you can also "
+"include a ``lang/`` folder in your plugin, with translation files in json"
+" (``.json``) or yaml (``.yml``) format named like ``en_us.json``. MCDR "
+"will automatically register these translations for your plugin"
+msgstr ""
+"对于 :ref:`plugin_dev/plugin_format:Multi file Plugin`，你还可以在你的插件中放置一个名为 "
+"``lang/`` 的文件夹，其中含有 json（``.json``）或者 yaml（``.yml``）格式的翻译文件。MCDR "
+"将会自动为你的插件注册这些翻译文件"
+
+#: ../plugin_dev/dev_tips.rst:21
+msgid ""
+"It's highly recommended to use your plugin id as the prefix of your "
+"translation key, so there will be no translation conflicts between "
+"plugins. e.g. use ``my_plugin.some.text`` instead of ``some.text`` as "
+"translation key"
+msgstr ""
+"强烈建议使用插件 ID 作为翻译键的前缀，这样插件之间就不会出现翻译冲突。例如，使用 ``my_plugin.some.text`` 而不是 "
+"``some.text`` 作为翻译键"
+
+#: ../plugin_dev/dev_tips.rst:24
+msgid ""
+"The translation key could be expressed as node name which under root node"
+" or the path of a nested multi-level nodes. For example, the following "
+"definitions of the translation key ``my_plugin.some.text`` in a language "
+"file in yaml (``.yml``) format are equivalent."
+msgstr ""
+"翻译键可以被表示为根节点下的子节点名称，或嵌套的多层节点的路径。例如，以下对于翻译键 ``my_plugin.some.text`` 在 "
+"yaml（``.yml``）格式的语言文件中的定义都是等价的"
+
+#: ../plugin_dev/dev_tips.rst:39
+msgid ""
+"For the difference between 2 translation method in "
+":class:`~mcdreforged.plugin.server_interface.ServerInterface`, let's use "
+"Minecraft code (yarn mapping) as an example:"
+msgstr ""
+"对于 :class:`~mcdreforged.plugin.server_interface.ServerInterface` "
+"中两种不同的翻译方法，我们可以使用 Minecraft 的代码（yarn 反混淆表）来进行类比区分"
+
+#: ../plugin_dev/dev_tips.rst:41
+msgid ""
+":meth:`~mcdreforged.plugin.server_interface.ServerInterface.tr` is "
+"``I18n.translate()``"
+msgstr ""
+":meth:`~mcdreforged.plugin.server_interface.ServerInterface.tr` 就是 "
+"``I18n.translate()``"
+
+#: ../plugin_dev/dev_tips.rst:42
+msgid ""
+":meth:`~mcdreforged.plugin.server_interface.ServerInterface.rtr`, or "
+":class:`~mcdreforged.translation.translation_text.RTextMCDRTranslation` "
+"is ``new TranslatableText()``"
+msgstr ""
+":meth:`~mcdreforged.plugin.server_interface.ServerInterface.rtr`, or "
+":class:`~mcdreforged.translation.translation_text.RTextMCDRTranslation` "
+"就是 ``new TranslatableText()``"
+
+#: ../plugin_dev/dev_tips.rst:44
+msgid ""
+"In general, the second method is recommended for translating things in "
+"your plugin, since it smartly use the proper language for the player or "
+"the console to send message, and use MCDR's language for general "
+"translation things including message logging"
+msgstr ""
+"通常来说，第二种方法是在你的插件中进行翻译的推荐方法，因为它可以聪明地为玩家或控制台挑选恰当的语言来进行消息回复，并使用 MCDR "
+"的语言来进行其他方面的翻译，如日志消息输出"
+
+#: ../plugin_dev/dev_tips.rst:48
+msgid "Event listening"
+msgstr "事件监听"
+
+#: ../plugin_dev/dev_tips.rst:50
+msgid ""
+"If you don't care about info from non-user source, listen to :ref:`event-"
+"user-info` event instead of :ref:`event-general-info` event, which can "
+"improve MCDR's performance when the server is spamming with non-user info"
+" (e.g. Pasting schematic with Litematica mod) in the console"
+msgstr ""
+"如果你不关心非用户的信息源，与其监听 :ref:`event-general-info` 事件，不如监听 :ref:`event-user-"
+"info` 事件。这可以在服务端刷屏非用户信息时（如使用 Litematica mod 粘贴蓝图）提升 MCDR 的性能表现"
+
+#: ../plugin_dev/dev_tips.rst:53
+msgid ""
+"If you only care about commands from users, instead of listening to :ref"
+":`event-user-info` event, you can :ref:`register a command tree <page-"
+"command>` to MCDR. It's much more efficient to develop than handling "
+"yourself inside :ref:`event-user-info` event"
+msgstr ""
+"如果你只关心用户输入的指令，与其监听 :ref:`event-user-info` 事件，你还可以 :ref:`注册一棵指令树 <page-"
+"command>`。这比手动在 :ref:`event-user-info` 事件里处理的开发效率要高不少"
+
+#: ../plugin_dev/dev_tips.rst:57
+msgid ""
+":ref:`plugin_dev/event:MCDR Stop` event allows you to have as many time "
+"as you want to save your data. Be carefully, don't enter an endless loop,"
+" MCDR is waiting for you to exit"
+msgstr ""
+":ref:`plugin_dev/event:MCDR Stop` 事件 能给你充足的时间来进行保存数据等操作。不过要小心，不要死循环了，MCDR"
+" 在等着你运算完成"
+
+#: ../plugin_dev/dev_tips.rst:61
+msgid "Multi-threading"
+msgstr "多线程"
+
+#: ../plugin_dev/dev_tips.rst:63
+msgid ""
+"If you want to do some tasks in your plugin that might take some time to "
+"finished, such as network querying or massive file operation, it's "
+"recommended to execute your code into a separated thread instead of "
+"directly executing them into your event listener function. Otherwise it "
+"might block the pending task execution"
+msgstr ""
+"如果你想要在你的插件中执行需要一些时间才能完成的任务，如网络操作或者文件操作，建议将你的代码放到一个独立的线程里执行，而不是直接在你注册的事件监听器函数中执行。否则"
+" MCDR 余下任务的执行可能会被阻塞"
+
+#: ../plugin_dev/dev_tips.rst:67
+msgid ""
+"For easier use there's a decorator named :func:`@new_thread "
+"<mcdreforged.api.decorator.new_thread.new_thread>` to help you make your "
+"function run in another thread asynchronously"
+msgstr ""
+"为了更易于使用，你可以使用一个名为 :func:`@new_thread "
+"<mcdreforged.api.decorator.new_thread.new_thread>` 的函数装饰器来使你的函数异步地执行"
+
+#: ../plugin_dev/dev_tips.rst:71
+msgid "User config, data and log files"
+msgstr "用户配置、数据及日志文件"
+
+#: ../plugin_dev/dev_tips.rst:73
+msgid ""
+"If you want to store some user configuration or user data file, it's "
+"recommend to store them inside the ``config`` folder rather than store "
+"them inside the plugin folder"
+msgstr "如果你需要储存一些用户配置或数据文件，推荐将它们储存到 ``config`` 文件夹中而不是储存到插件文件夹中"
+
+#: ../plugin_dev/dev_tips.rst:76
+msgid ""
+"The reason is that user might have their plugins be placed in another "
+"directory or even have multiple MCDR instances to load a same plugin "
+"collection directory, by a configuration option named "
+":ref:`configuration:plugin_directories`"
+msgstr ""
+"其中的原因是，用户可能会把他们的插件放置在另外非默认的文件夹中，甚至可能会让多个 MCDR "
+"实例共享使用一个相同的插件文件夹。这是可以通过修改配置文件选项 :ref:`configuration:plugin_directories` "
+"来实现的"
+
+#: ../plugin_dev/dev_tips.rst:80
+msgid ""
+"If you store your configuration or data inside the plugin folder, you "
+"can't distinguish which MCDR instance the configuration file belongs to. "
+"You can either store them inside the ``config`` folder directly or a "
+"inner folder inside the ``config`` folder like ``config/my_plugin/``, so "
+"the user data can be dedicated for the MCDR instance that loads your "
+"plugin"
+msgstr ""
+"如果你将你的配置数据文件储存在了插件文件夹中，那你就无法区分出该配置文件是属于哪一个 MCDR 实例了。因此，你可以将这些文件直接储存至 "
+"``config`` 文件夹，或者 ``config`` 中的一个子文件夹如 ``config/my_plugin/`` "
+"中，这样每个加载你的插件的 MCDR 实例即可拥有独享的用户配置数据"
+
+#: ../plugin_dev/dev_tips.rst:85
+msgid ""
+":meth:`~mcdreforged.plugin.server_interface.PluginServerInterface.get_data_folder`"
+" method is a nice method for lazyman"
+msgstr ""
+":meth:`~mcdreforged.plugin.server_interface.PluginServerInterface.get_data_folder`"
+" 是个不错的懒人方法"
+
+#: ../plugin_dev/dev_tips.rst:87
+msgid "For logging files, store them inside ``logs/`` folder is a good idea"
+msgstr "对于日志文件，把它们储存至 ``logs/`` 文件夹中是一个不错的选择"
+
+#: ../plugin_dev/dev_tips.rst:90
+msgid "External packages"
+msgstr "额外的 Python 包"
+
+#: ../plugin_dev/dev_tips.rst:92
+msgid ""
+"Some times you plugin needs some external resource files or requires some"
+" other ``.py`` codes as libraries. For these, you need to rather write "
+"your plugin in :ref:`plugin_dev/plugin_format:Multi file Plugin` format "
+"and insert them in your plugin, or somehow convert them into a separated "
+"plugin and declare the dependency"
+msgstr ""
+"有时候你的插件需要一些额外的资源文件，或者需要一些其他的 ``.py`` 代码文件作为运行库。对于这些文件，你需要使用 "
+":ref:`plugin_dev/plugin_format:Multi file Plugin` "
+"格式来编写你的插件，并将它们插入你的插件中；或者以某种方式将它们转换为独立的插件并声明依赖项"
+
+#: ../plugin_dev/dev_tips.rst:97
+msgid "Misc"
+msgstr "其他"
+
+#: ../plugin_dev/dev_tips.rst:99
+msgid ""
+"The current working directory is the folder where MCDR is in. **DO NOT** "
+"change it since that will mess up everything"
+msgstr "MCDR 的工作路径是 MCDR 所在的文件夹路径。**切勿** 修改工作路径，这将弄乱一切"
+
+#: ../plugin_dev/dev_tips.rst:100
+msgid ""
+"For the :class:`~mcdreforged.info_reactor.info.Info` parameter in :ref"
+":`event-general-info` event etc., don't modify it, just use its public "
+"methods and read its properties"
+msgstr ""
+"对于 :ref:`event-general-info` 等事件中的参数 "
+":class:`~mcdreforged.info_reactor.info.Info`，不要修改它，仅调用它的公开方法并读取它的相关属性就行了"
+
