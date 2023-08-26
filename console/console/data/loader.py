@@ -12,7 +12,6 @@ config: dict = {}
 userdata: list[dict] = []
 
 
-@logger.catch
 def load_config() -> dict:
     """
     Loads the config file
@@ -39,7 +38,6 @@ def load_config() -> dict:
     return config
 
 
-@logger.catch
 def load_user_data() -> list:
     """
     Loads the user data file
