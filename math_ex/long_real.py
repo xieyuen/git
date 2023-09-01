@@ -21,11 +21,11 @@ class LongReal:
 
     def __init__(self, num: int | float | str | Real | Self):
         if (
-                type(num) is not int and
-                type(num) is not float and
-                type(num) is not str and
-                type(num) is not Real and
-                type(num) is not LongReal
+            type(num) is not int and
+            type(num) is not float and
+            type(num) is not str and
+            type(num) is not Real and
+            type(num) is not LongReal
         ):
             raise TypeError('LongReal 类只能使用 int/float/str/Real/LongReal 类型对象进行初始化')
 
