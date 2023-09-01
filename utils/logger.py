@@ -18,9 +18,7 @@
 `critical`和`crit`
 """
 
-
 from typing import Tuple, TypeVar
-
 
 __all__ = [
     # 类及其实例
@@ -34,7 +32,6 @@ __all__ = [
     'warn', 'crit',
 ]
 
-
 Level = TypeVar('Level', 'debug', 'info', 'warning', 'error', 'critical')
 Massage = TypeVar('Massage', str, bytes, bytearray, memoryview)
 
@@ -45,17 +42,17 @@ class Logger:
     class PrintLog:
         """日志打印"""
         __log_color = {  # 日志颜色
-            'debug':    '\033[34m',   # 蓝色
-            'info':     '\033[92m',   # 绿色
-            'warning':  '\033[93m',   # 橙色
-            'error':    '\033[91m',   # 红色
+            'debug': '\033[34m',  # 蓝色
+            'info': '\033[92m',  # 绿色
+            'warning': '\033[93m',  # 橙色
+            'error': '\033[91m',  # 红色
             'critical': '\033[31;1m'  # 红色加粗
         }
         __log_map = {
-            'debug':    __log_color['debug'] + '[debug]',
-            'info':     __log_color['info'] + '[Info]',
-            'error':    __log_color['error'] + '[ERROR]',
-            'warning':  __log_color['warning'] + '[WARNING]',
+            'debug': __log_color['debug'] + '[debug]',
+            'info': __log_color['info'] + '[Info]',
+            'error': __log_color['error'] + '[ERROR]',
+            'warning': __log_color['warning'] + '[WARNING]',
             'critical': __log_color['critical'] + '[CRITICAL]'
         }
 
@@ -113,11 +110,12 @@ class Logger:
 # 实例
 logger = Logger()
 
-def debug    (msg: Massage) -> Tuple[Level, Massage] : return logger.debug    (msg) # debug    日志
-def info     (msg: Massage) -> Tuple[Level, Massage] : return logger.info     (msg) # info     日志
-def warning  (msg: Massage) -> Tuple[Level, Massage] : return logger.warning  (msg) # warning  日志
-def warn     (msg: Massage) -> Tuple[Level, Massage] : return logger.warn     (msg) # warning  日志
-def error    (msg: Massage) -> Tuple[Level, Massage] : return logger.error    (msg) # error    日志
-def critical (msg: Massage) -> Tuple[Level, Massage] : return logger.critical (msg) # critical 日志
-def crit     (msg: Massage) -> Tuple[Level, Massage] : return logger.crit     (msg) # critical 日志
-def catch_exc(msg: Massage) -> Tuple[Level, Massage] : return logger.catch_exc(msg) # 异常日志
+
+def debug(msg: Massage) -> Tuple[Level, Massage]: return logger.debug(msg)  # debug    日志
+def info(msg: Massage) -> Tuple[Level, Massage]: return logger.info(msg)  # info     日志
+def warning(msg: Massage) -> Tuple[Level, Massage]: return logger.warning(msg)  # warning  日志
+def warn(msg: Massage) -> Tuple[Level, Massage]: return logger.warn(msg)  # warning  日志
+def error(msg: Massage) -> Tuple[Level, Massage]: return logger.error(msg)  # error    日志
+def critical(msg: Massage) -> Tuple[Level, Massage]: return logger.critical(msg)  # critical 日志
+def crit(msg: Massage) -> Tuple[Level, Massage]: return logger.crit(msg)  # critical 日志
+def catch_exc(msg: Massage) -> Tuple[Level, Massage]: return logger.catch_exc(msg)  # 异常日志

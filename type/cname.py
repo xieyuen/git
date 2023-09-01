@@ -1,12 +1,12 @@
 from typing import Any
 
 from base import isInt, isStr, isDict, isBool
-from extra import isNumber, isCharacter
+from extra import isNumber, isCharacter, isFunction
 
 
 __all__ = [
     "isInteger", "isString", "isDictionary", "isNum", "isChar",
-    'isMap', 'isBoolean'
+    'isMap', 'isBoolean', 'isFunc',
 ]
 
 
@@ -21,3 +21,4 @@ def isBoolean(x: Any) -> bool: return isBool(x)
 def isNum(x: Any) -> bool: return isNumber(x)
 def isChar(x: Any) -> bool: return isCharacter(x)
 def isMap(x: Any) -> bool: return isDict(x)
+def isFunc(x: Any) -> bool: return isFunction(x)

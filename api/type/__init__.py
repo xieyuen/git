@@ -6,11 +6,12 @@ from ...type.base import \
 
 from ...type.cname import \
 	isInteger, isString, isNum, isDictionary, \
-	isChar, isMap, isBoolean
+	isChar, isMap, isBoolean, isFunc
 
 from ...type.extra import \
 	isLongReal, isReal, isNumber, isEmpty, isNumNoBool, \
-	isCanFor, isImmutable, isCharacter, isArray, isDouble
+	isCanFor, isImmutable, isCharacter, isArray, isDouble, \
+	isFunction
 
 
 __all__ = [
@@ -30,12 +31,12 @@ __all__ = [
 	'isLongReal', 'isReal', 'isNumber',
 	'isEmpty', 'isNumNoBool', 'isCanFor',
 	'isImmutable', 'isCharacter', 'isArray',
-	'isDouble',
+	'isDouble', 'isFunction',
 
 	# --------------------
 	#    Canonical Name
 	# --------------------
 
 	'isInteger', 'isString', 'isNum', 'isDictionary', 'isChar',
-	'isMap', 'isBoolean',
+	'isMap', 'isBoolean', 'isFunc',
 ]

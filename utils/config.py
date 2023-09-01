@@ -23,7 +23,7 @@ import os
 import yaml
 from math import isclose
 
-from logger import logger
+from .logger import logger
 
 
 class Config:
